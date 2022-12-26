@@ -2,10 +2,10 @@ package main
 
 import (
 	"flag"
-	"os"
+	"fmt"
 	"github.com/LucasCarioca/go-template/pkg/config"
 	"github.com/LucasCarioca/go-template/pkg/server"
-	"fmt"
+	"os"
 )
 
 func getEnv() string {

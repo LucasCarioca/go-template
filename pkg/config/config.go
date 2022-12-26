@@ -1,15 +1,15 @@
 package config
 
 import (
-	"github.com/spf13/viper"
 	"fmt"
+	"github.com/spf13/viper"
 )
 
 var config *viper.Viper
 
 func Init(env string) {
 	config = viper.New()
-	config.SetConfigName(fmt.Sprintf("config.%s", env)) 
+	config.SetConfigName(fmt.Sprintf("config.%s", env))
 	config.SetConfigType("yaml")
 	config.AddConfigPath("config/")
 	config.AddConfigPath("../config/")
@@ -22,6 +22,6 @@ func Init(env string) {
 	}
 }
 
-func GetConfig() *viper.Viper { 
+func GetConfig() *viper.Viper {
 	return config
 }
